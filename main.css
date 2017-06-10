@@ -105,6 +105,7 @@ body {
 .bot-container{
     display: flex;
     justify-content: flex-start;
+    
 }
 .user-container{
     display: flex;
@@ -112,6 +113,8 @@ body {
     
 }
 .bot-reply{
+    margin-bottom: 10%;
+    margin-top: 5%;
     background-color:#51AEFF;
     padding: 10px;
     border-radius: 0px 15px 15px 20px;
@@ -119,6 +122,8 @@ body {
     
 }
 .user-reply{
+    margin-bottom: 10%;
+    margin-top: 5%;
     background-color:#51AEFF;
     padding: 10px;
     border-radius: 15px 0px 20px 15px;
