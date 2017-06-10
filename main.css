@@ -102,30 +102,30 @@ body {
     height: 64%;
     font-family: berkshire-swash, cursive;
 }
-.center_pragraph{
+.bot-container{
     display: flex;
     justify-content: flex-start;
 }
-.center_pragraph-1{
+.user-container{
     display: flex;
     justify-content: flex-end;
     
 }
-.paragraph{
+.bot-reply{
     background-color:#51AEFF;
     padding: 10px;
     border-radius: 0px 15px 15px 20px;
     color: #fff;
     
 }
-.paragraph-1{
+.user-reply{
     background-color:#51AEFF;
     padding: 10px;
     border-radius: 15px 0px 20px 15px;
     color: #fff;
     
 }
-.card{
+.bot-pic{
     width: 50px;
     height: 50px;
     border-radius: 50px;
@@ -136,7 +136,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.card-1{
+.user-pic{
     width: 50px;
     height: 50px;
     border-radius: 50px;
