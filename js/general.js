@@ -11,9 +11,6 @@ function sendReply(){
     
 }
 
-$('.table').mounTable(simplifiedJSON(user),{
-  model: '.mountable-model'
-});
 
 
 var botReply = function botReply(text){
