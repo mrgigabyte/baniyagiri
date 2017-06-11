@@ -9,11 +9,8 @@ function updateBudget(txt){
                             console.log('ok')
                             newbudgetamt = queue.updateBudget.amount;
                             console.log(newbudgetamt)
-                            for(var key in user.date){
-                                newbudgetamt1 = newbudgetamt;
-                                newbudgetamt = newbudgetamt-user.date[key].deduct;
-                        
-                        }
+                            newbudgetamt1 = newbudgetamt;
+                            newbudgetamt=newbudgetamt-netDeduction();
                             console.log(newbudgetamt)
                             if (newbudgetamt>0){
                                 user.Budget = newbudgetamt1;
@@ -32,7 +29,8 @@ function updateBudget(txt){
             }
         
     else{
-          txt = txt.split(" ")[1];
+          txt = txt.split(" ")[2];
+          console.log(txt);
           if(typeof(parseInt(txt))=="number"){
                     console.log(parseInt(txt));
                     queue.updateBudget={"confirm":undefined,"amount":parseInt(txt)}

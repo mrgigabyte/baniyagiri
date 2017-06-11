@@ -5,6 +5,7 @@ function setBudget(text){
 
 function deductBalance(text){
     var bgtxt;
+    var currentDate = Date().split(" ").splice(1,3).join(" ");
     var amount=text.split(" ")[1];
     var item=text.split(" ")[2];
     if(isEmpty(queue)!=true){
@@ -26,11 +27,12 @@ function deductBalance(text){
         return bgtxt;
     }
      if(amount!==undefined){
-        console.log(amount)
-        console.log(user.Budget)
-        console.log(item)
-        user.Budget=user.Budget-parseInt(amount)
-        bgtxt="So you have spent: "+amount+" on "+item+" Remaining balance is now: "+ user.Budget
+        if (!user.date[currentDate]) {
+            user.date[currentDate] = {};
+        }
+        user.date[currentDate].push({"deduct":parseInt(amount),"reason":item})
+        console.log(user)
+        bgtxt="So you have spent: "+amount+" on "+item+" Remaining balance is now: "+ user.Budget-netDeduction()
      }
     
     else{
