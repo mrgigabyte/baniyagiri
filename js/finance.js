@@ -1,4 +1,3 @@
-var user={}; 
 var queue={};   
 function setBudget(text){
    user.Budget=parseInt(text);
