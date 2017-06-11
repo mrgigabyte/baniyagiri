@@ -1,6 +1,7 @@
 
 function sendReply(){
 //    $('.bot-container').addClass('isActive')
+    console.log(simplifiedJSON(user));
     $('.center_body').append(`
     <div class="user-container">
     <p class="user-reply">`+$('.message_input').val()+`</p><div class="user-pic"></div></div>`)
@@ -9,6 +10,11 @@ function sendReply(){
     ScrollToBottom()
     
 }
+
+$('.table').mounTable(simplifiedJSON(user),{
+  model: '.mountable-model'
+});
+
 
 var botReply = function botReply(text){
     console.log(text)
@@ -74,6 +80,19 @@ function ScrollToBottom(){
        var d = document.getElementById("appendIn");
        d.scrollTop = d.scrollHeight;
        }
+
+function netDeduction(){
+    var netamt = 0;
+    for(var key in user.date){
+        for(var item in user.date[key]){
+            
+                 netamt = netamt+user.date[key][item].deduct;
+        }
+                           
+                        
+                        }
+    return netamt;
+}
 
 
     

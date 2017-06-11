@@ -1,29 +1,46 @@
 var user = {
     "Budget":5000,
     "date":{
-            "2017-05-04":{
+            "Jan 11 2017":[{
                             "deduct":100,
                             "reason": "pizza"
-                        },
-            "2017-05-05":{
+                        }],
+            "Feb 11 2017":[{
                             "deduct":1000,
                             "reason": "clothing"
-                        },
-            "2017-05-06":{
+                        }],
+            "Mar 11 2017":[{
                             "deduct":50,
                             "reason": "milk"
-                        },
-            "2017-05-07":{
+                        }],
+            "Apr 11 2017":[{
                             "deduct":70,
                             "reason": "cab"
-                        },
-            "2017-05-08":{
+                        }],
+            "May 11 2017":[{
                             "deduct":120,
                             "reason": "beer"
-                        },
-            "2017-05-09":{
+                        }],
+            "Jun 11 2017":[{
                             "deduct":20,
                             "reason": "tea"
-                        }
+                        },
+                          {
+                            "deduct":120,
+                            "reason": "veggies"
+                        }]   
     }
+}
+
+var user1=[];
+
+function simplifiedJSON(user){
+    for(var i in user.date){
+        for(var j in user.date[i])
+            user1.push({
+                "date": i,
+                "deduct":user.date[i][j]["deduct"],
+                "reason":user.date[i][j]["reason"]
+    })}
+    return user1;
 }
